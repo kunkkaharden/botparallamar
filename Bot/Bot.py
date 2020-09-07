@@ -19,7 +19,7 @@ def main():
     info = info_mensaje(sms)
 
     if not info.is_bot and info.tipo_sms == "texto":
-        enviar_mensaje();
+        enviar_mensaje(BOT_URL,info.id_chat ,leer_mensaje(sms));
 
 
 if __name__ == '__main__':
