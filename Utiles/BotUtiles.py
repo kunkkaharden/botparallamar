@@ -1,3 +1,4 @@
+import requests
 class Info_Mensaje():
     def __init__(self ,persona, id_persona, bot, chat, id_chat, tipo_chat, tipo_sms,date,update_id):
         self.persona = persona
@@ -53,7 +54,7 @@ def leer_mensaje(mensaje):
     texto = mensaje['message']['text']
     return texto
 
-def enviar_mensaje(idChat, texto):
+def enviar_mensaje(BOT_URL ,idChat, texto):
     json_data = {
         "chat_id": idChat,
         "text": texto,
