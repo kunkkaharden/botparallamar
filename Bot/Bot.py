@@ -17,7 +17,7 @@ app = Flask(__name__)
 def main():
     sms = request.json
     info = info_mensaje(sms)
-
+    print(leer_mensaje(sms))
     if not info.is_bot and info.tipo_sms == "texto":
         enviar_mensaje(BOT_URL,info.id_chat ,leer_mensaje(sms));
 
