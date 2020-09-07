@@ -1,3 +1,6 @@
 
 .idea/misc.xml
 Utiles/__pycache__/__init__.cpython-37.pyc
+*.xml
+*.pyc
+*.xml
