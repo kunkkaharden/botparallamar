@@ -6,7 +6,7 @@ import os
 import requests
 from flask import Flask, request
 from datetime import datetime,time
-from Utiles.BotUtiles import *
+from BotUtiles import *
 
 BOT_URL = f'https://api.telegram.org/bot{os.environ["BOT_KEY"]}/'  # <-- add your telegram token as environment variable
 
