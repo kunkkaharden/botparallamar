@@ -15,8 +15,9 @@ def main():
 
     if not info.is_bot and info.tipo_sms == "texto":
         print(leer_mensaje(sms))
-        enviar_mensaje(BOT_URL,info.id_chat ,leer_mensaje(sms));
+        enviar_mensaje(BOT_URL,info.id_chat ,leer_mensaje(sms))
 
+    return ''
 
 if __name__ == '__main__':
         app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=True)
