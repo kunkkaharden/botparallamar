@@ -62,3 +62,7 @@ def enviar_mensaje(BOT_URL ,idChat, texto):
     message_url = BOT_URL + 'sendMessage'
     requests.post(message_url, json=json_data)
     return ''
+
+
+def mencion(id_user):
+    return ''
