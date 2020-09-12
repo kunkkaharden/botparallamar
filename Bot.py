@@ -14,7 +14,8 @@ def main():
     info = info_mensaje(sms)
 
     if not info.is_bot and info.tipo_sms == "texto":
-        print(leer_mensaje(sms))
+        print(sms)
+        enviar_mensaje(BOT_URL,info.id_chat ,sms)
         enviar_mensaje(BOT_URL,info.id_chat ,leer_mensaje(sms) +" de " +obtenernick(sms))
 
     return ''

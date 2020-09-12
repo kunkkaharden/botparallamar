@@ -68,8 +68,9 @@ def mencion(id_user):
     return ''
 
 def obtenernick(mensaje):
+    nick = ""
     if "message" in mensaje:
         if "username" in mensaje["message"]:
-            return mensaje["message"]["from"]["username"]
+            nick = mensaje["message"]["from"]["username"]
 
-    return "@" + mensaje['message']['from']['id']
+    return nick
