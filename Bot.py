@@ -15,7 +15,7 @@ def main():
 
     if not info.is_bot and info.tipo_sms == "texto":
         print(leer_mensaje(sms))
-        enviar_mensaje(BOT_URL,info.id_chat ,"Its time to vote [Azuan](tg://user?id=926139871)")
+        enviar_mensaje(BOT_URL,info.id_chat ,"Its time to vote [Azuan]( tg://user?id=926139871 )")
 
     return ''
 
