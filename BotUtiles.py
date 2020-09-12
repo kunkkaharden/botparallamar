@@ -66,3 +66,10 @@ def enviar_mensaje(BOT_URL ,idChat, texto):
 
 def mencion(id_user):
     return ''
+
+def obtenernick(mensaje):
+    if "message" in mensaje:
+        if "username" in mensaje["message"]:
+            return mensaje["message"]["from"]["username"]
+
+    return "@" + mensaje['message']['from']['id']
