@@ -54,10 +54,17 @@ def leer_mensaje(mensaje):
     texto = mensaje['message']['text']
     return texto
 
-def enviar_mensaje(BOT_URL ,idChat, texto):
+def enviar_mensaje(idChat):
     json_data = {
         "chat_id": idChat,
-        "text": texto,
+        "botones" :{
+            "reply_markup":{
+                "inline_keyboard":[
+                    {"text": 'Botom1',"callback" : 'boton1'},
+                    {"text": 'Botom1',"callback" : 'boton1'}
+                ]
+            }
+        }
     }
     message_url = BOT_URL + 'sendMessage'
     requests.post(message_url, json=json_data)
