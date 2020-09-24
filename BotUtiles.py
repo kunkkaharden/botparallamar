@@ -54,7 +54,7 @@ def leer_mensaje(mensaje):
     texto = mensaje['message']['text']
     return texto
 
-def enviar_mensaje(idChat):
+def enviar_mensaje(BOT_URL ,idChat):
     json_data = {
         "chat_id": idChat,
         "botones" :{
